@@ -5,12 +5,14 @@ public class PlayerController : MonoBehaviour {
 
 	public float walkSpeed = 10.0f;
 	public float g = 10.0f;
+	public GameObject drain_colli;
 
 	private int mainSpeed = 100;
 	private GameObject PlayerChar ;
 	// Use this for initialization
 	void Start () {
 		//PlayerChar = GetComponent<this.gameObject>();
+		drain_colli.SetActive (false);
 	}
 	
 	void FixedUpdate(){
@@ -20,6 +22,7 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
 		//PlayerMove ();
 		//Movement ();
+		DrainControl ();
 
 	}
 
@@ -33,6 +36,16 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetKey(KeyCode.A)) {
 			transform.Translate(Vector2.right * walkSpeed *Time.deltaTime);
 			transform.eulerAngles = new Vector2 (0,180);
+		}
+	}
+
+	private void DrainControl()
+	{
+		if (Input.GetKey (KeyCode.E)) {
+			drain_colli.SetActive (true);
+		}
+		else{
+			drain_colli.SetActive (false);
 		}
 	}
 
