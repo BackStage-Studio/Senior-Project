@@ -1,23 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Absorb : MonoBehaviour {
+public class Score : MonoBehaviour {
+
+	public string score ;
+
+	private TextMesh text;
 
 	// Use this for initialization
 	void Start () {
-	
+		//text = GetComponent <Text> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
-	}
-
-	void OnTriggerEnter(Collider colli)
-	{
-		if(colli.gameObject.tag==("cloud_orb"))
-		{
-			//print("collect");
-		}
+		text.text = "Score: " + score;
 	}
 }

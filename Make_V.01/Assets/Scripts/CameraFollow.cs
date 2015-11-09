@@ -16,8 +16,8 @@ public class CameraFollow : MonoBehaviour {
 //		transform.position = Vector3.Lerp(transform.position, Player.position+transform.position, followSpeed);
 //	}
 
-	public bool followCharacter;
-	public bool yFollow;
+	//public bool followCharacter;
+	//public bool yFollow;
 	public GameObject player;
 	public float camSpeed;
 	
@@ -28,19 +28,19 @@ public class CameraFollow : MonoBehaviour {
 	}
 	
 	void Update(){
-		if(followCharacter){
+		//if(followCharacter){
 			followCam();
-		}
+		//}
 	}
 	
 	private void followCam(){
 		float sigmaY = transform.position.y - player.transform.position.y;
 		Vector3 playerPos;
-		if (yFollow) {
-			playerPos = new Vector3(player.transform.position.x,player.transform.position.y+fixedSigmaY,transform.position.z);
-		} else {
+//		if (yFollow) {
+//			playerPos = new Vector3(player.transform.position.x,player.transform.position.y+fixedSigmaY,transform.position.z);
+//		} else {
 			playerPos = new Vector3(player.transform.position.x,player.transform.position.y+sigmaY,transform.position.z);
-		}
+//		}
 		transform.position = Vector3.Lerp (transform.position, playerPos, camSpeed);
 	}
 }
