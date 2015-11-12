@@ -3,9 +3,9 @@ using System.Collections;
 
 public class Score : MonoBehaviour {
 
-	public string score ;
+//	public string score ;
 
-	private TextMesh text;
+//	private TextMesh text;
 
 	// Use this for initialization
 	void Start () {
@@ -14,6 +14,6 @@ public class Score : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		text.text = "Score: " + score;
+	//	text.text = "Score: " + score;
 	}
 }

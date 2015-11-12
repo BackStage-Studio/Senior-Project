@@ -34,12 +34,12 @@ public class CameraFollow : MonoBehaviour {
 	}
 	
 	private void followCam(){
-		float sigmaY = transform.position.y - player.transform.position.y;
+//		float sigmaY = transform.position.y - player.transform.position.y;
 		Vector3 playerPos;
 //		if (yFollow) {
-//			playerPos = new Vector3(player.transform.position.x,player.transform.position.y+fixedSigmaY,transform.position.z);
+			playerPos = new Vector3(player.transform.position.x,player.transform.position.y+fixedSigmaY,transform.position.z);
 //		} else {
-			playerPos = new Vector3(player.transform.position.x,player.transform.position.y+sigmaY,transform.position.z);
+			//playerPos = new Vector3(player.transform.position.x,player.transform.position.y+sigmaY,transform.position.z);
 //		}
 		transform.position = Vector3.Lerp (transform.position, playerPos, camSpeed);
 	}

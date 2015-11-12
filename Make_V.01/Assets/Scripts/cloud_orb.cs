@@ -8,17 +8,21 @@ public class cloud_orb : MonoBehaviour {
 
 	private bool drain = false;
 	private GameObject playerPos;
+	private float spin;
 	//private GameObject P_colli ;
 	// Use this for initialization
 	void Start () {
 		//playerPos = GameObject.Find ("Player");
 		//player_colli = GameObject.Find ("player");
 		//player_colli = player_colli.GetComponentsInChildren<"Drain_Collision">();
+		spin = Random.Range (-4.5f, 4.5f);
 	}
 
 	void FixedUpdate()
 	{
 		//playerPos = P_colli.gameObject;
+		transform.Rotate(0, 0, spin);  
+		//drain = false;
 	}
 	// Update is called once per frame
 	void Update () {
@@ -39,7 +43,7 @@ public class cloud_orb : MonoBehaviour {
 //			                                   Time.deltaTime * moveSpeed);
 			drain = true;
 		}
-		//drain = false;
+		//if(colli==null)drain = false;
 //		if (colli == player_colli) {
 //			gameObject.SetActive(false);
 //		}
@@ -49,7 +53,8 @@ public class cloud_orb : MonoBehaviour {
 	{
 		if(colli.gameObject.name==("Player")){
 			if(drain){
-				gameObject.SetActive(false);
+				//gameObject.SetActive(false);
+				Destroy(gameObject);
 				print ("Check");
 			}
 		}
@@ -62,7 +67,8 @@ public class cloud_orb : MonoBehaviour {
 
 	private void Move()
 	{
-		transform.position = Vector3.Lerp (transform.position, playerPos.transform.position, moveSpeed*Time.deltaTime);
+		transform.position = Vector3.MoveTowards(transform.position,playerPos.transform.position, moveSpeed*Time.deltaTime);
+//		transform.position = Vector3.Lerp (transform.position, playerPos.transform.position, moveSpeed*Time.deltaTime);
 //		if(((transform.position.x- playerPos.transform.position.x)<0.1)||((transform.position.y- playerPos.transform.position.y)<0.1))
 //		{
 //			Destroy(gameObject);

@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour {
 	public bool onDebug;
 	//------------------------------------------------------------------
 
-	private int mainSpeed = 100;
+	//private int mainSpeed = 100;
 	private GameObject PlayerChar ;
 	// Use this for initialization
 	void Start () {
