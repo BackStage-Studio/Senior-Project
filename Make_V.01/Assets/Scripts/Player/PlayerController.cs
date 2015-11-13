@@ -4,8 +4,13 @@ using System.Collections;
 public class PlayerController : MonoBehaviour {
 
 	public float walkSpeed = 10.0f;
-	public float g = 10.0f;
+//	public float g = 10.0f;
+	public GameObject Dead_par;
 	public GameObject drain_colli;
+	public GameObject move_colli;
+	public GameObject Active_UI;
+
+	public Animator Walkanim;
 
 	//------------------------------BuJU------------------------------
 	//Control
@@ -24,6 +29,7 @@ public class PlayerController : MonoBehaviour {
 	private float velocityY = 0;
 	public bool isGround = false;
 	private int jumpCount;
+	private bool jumping;
 	
 	//Debug
 	public bool onDebug;
@@ -35,12 +41,18 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
 		//PlayerChar = GetComponent<this.gameObject>();
 		drain_colli.SetActive (false);
+		move_colli.SetActive (false);
+		Active_UI.SetActive (false);
+		jumping = false;
 	}
 	
 	void FixedUpdate(){
 		//PlayerMove ();
 		Movement ();
 		gravity ();
+//		if (!isGround&&!jumping) {
+//			Walkanim.Play("falling");
+//		}
 	}
 	void Update () {
 		//PlayerMove ();
@@ -54,6 +66,9 @@ public class PlayerController : MonoBehaviour {
 				jump();
 			}
 		}
+		if (gameObject.activeSelf == false) {
+			Dead_par.SetActive(true);
+		}
 
 	}
 
@@ -61,12 +76,26 @@ public class PlayerController : MonoBehaviour {
 	{
 		if (Input.GetKey(KeyCode.D)) {
 			transform.Translate(Vector2.right * walkSpeed *Time.deltaTime);
+			//Walkanim.Play("walk");
 			transform.eulerAngles = new Vector2 (0,0);
 		}
 
-		if (Input.GetKey(KeyCode.A)) {
-			transform.Translate(Vector2.right * walkSpeed *Time.deltaTime);
-			transform.eulerAngles = new Vector2 (0,180);
+		if (Input.GetKey (KeyCode.A)) {
+			transform.Translate (Vector2.right * walkSpeed * Time.deltaTime);
+			//Walkanim.Play ("walk");
+			transform.eulerAngles = new Vector2 (0, 180);
+		} 
+		if (Input.GetKey (KeyCode.D) || Input.GetKey (KeyCode.A)) {
+			//print ("walk");
+			if(isGround)
+			   Walkanim.Play("walk");
+//			if(isGround==false&&(Walkanim.GetBool("jump")==false))
+//				Walkanim.Play("falling");
+		} else {
+			if(isGround)
+			{Walkanim.Play("Idel");}
+//			if(isGround==false&&(Walkanim.GetBool("jump")==false))
+//			Walkanim.Play("falling");
 		}
 	}
 
@@ -74,9 +103,13 @@ public class PlayerController : MonoBehaviour {
 	{
 		if (Input.GetKey (KeyCode.E)) {
 			drain_colli.SetActive (true);
+			move_colli.SetActive (true);
+			Active_UI.SetActive (true);
 		}
 		else{
 			drain_colli.SetActive (false);
+			move_colli.SetActive (false);
+			Active_UI.SetActive (false);
 		}
 	}
 
@@ -157,6 +190,7 @@ public class PlayerController : MonoBehaviour {
 			
 			if (!isGround) {
 				transform.position = new Vector3 (transform.position.x, transform.position.y - velocityY, transform.position.z);
+				if(!Walkanim.GetCurrentAnimatorStateInfo(0).IsName("jump"))Walkanim.Play("falling");
 			}
 			
 		} else {
@@ -170,8 +204,11 @@ public class PlayerController : MonoBehaviour {
 			if(isGround){
 				velocityY = -jumpPower;
 				isGround = false;
+				Walkanim.Play("jump");
+				//jumping=true;
 			}
 		}
+		//jumping = false;
 	}
 	
 	private void jump2(){

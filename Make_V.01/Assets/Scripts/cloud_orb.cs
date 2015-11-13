@@ -22,13 +22,16 @@ public class cloud_orb : MonoBehaviour {
 	{
 		//playerPos = P_colli.gameObject;
 		transform.Rotate(0, 0, spin);  
+		if (drain) {
+			Move ();
+		}
 		//drain = false;
 	}
 	// Update is called once per frame
 	void Update () {
 		
 	}
-
+	/*
 	void OnTriggerStay(Collider colli)
 	{
 		if(colli.gameObject.name==("Drain_Collision"))
@@ -48,15 +51,27 @@ public class cloud_orb : MonoBehaviour {
 //			gameObject.SetActive(false);
 //		}
 	}
-
+*/
 	void OnTriggerEnter(Collider colli)
 	{
 		if(colli.gameObject.name==("Player")){
-			if(drain){
+			//if(drain){
 				//gameObject.SetActive(false);
 				Destroy(gameObject);
 				print ("Check");
-			}
+			//}
+		}
+		if(colli.gameObject.name==("Drain_Collision"))
+		{
+			playerPos = colli.gameObject;
+			//print("collect");
+			//Move ();
+			//gameObject.SetActive(false);
+			//transform.position = new Vector3(0,0,0);
+			//			transform.position.x = Mathf.Lerp( transform.position.x,
+			//			                                   playerPos.transform.position.x, 
+			//			                                   Time.deltaTime * moveSpeed);
+			drain = true;
 		}
 //		if(colli.gameObject.name==("Player")){
 //			gameObject.SetActive(false);

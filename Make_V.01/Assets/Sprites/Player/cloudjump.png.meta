@@ -1,0 +1,232 @@
+fileFormatVersion: 2
+guid: 0582eb8d461b82d40ab95f193806ef3f
+timeCreated: 1447435797
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: cloudjump_0
+    21300002: cloudjump_1
+    21300004: cloudjump_2
+    21300006: cloudjump_3
+    21300008: cloudjump_4
+    21300010: cloudjump_5
+    21300012: cloudjump_6
+    21300014: cloudjump_7
+    21300016: cloudjump_8
+    21300018: cloudjump_9
+    21300020: cloudjump_10
+    21300022: cloudjump_11
+    21300024: cloudjump_12
+    21300026: cloudjump_13
+    21300028: cloudjump_14
+    21300030: cloudjump_15
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: cloudjump_0
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 520
+        width: 111
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cloudjump_1
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 705
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cloudjump_2
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 522
+        width: 123
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cloudjump_3
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 529
+        width: 82
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cloudjump_4
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 533
+        width: 148
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cloudjump_5
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 533
+        width: 144
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cloudjump_6
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 693
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cloudjump_7
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 502
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cloudjump_8
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 502
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cloudjump_9
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 504
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cloudjump_10
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 268
+        width: 147
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cloudjump_11
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 268
+        width: 150
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cloudjump_12
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 271
+        width: 148
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cloudjump_13
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 272
+        width: 148
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cloudjump_14
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 277
+        width: 144
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cloudjump_15
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 22
+        width: 147
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
